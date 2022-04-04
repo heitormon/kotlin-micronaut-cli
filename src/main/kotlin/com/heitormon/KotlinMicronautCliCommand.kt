@@ -1,29 +1,19 @@
 package com.heitormon
 
+import com.heitormon.math.commands.AdditionCommand
 import io.micronaut.configuration.picocli.PicocliRunner
-import io.micronaut.context.ApplicationContext
-
-import picocli.CommandLine
 import picocli.CommandLine.Command
 import picocli.CommandLine.Option
-import picocli.CommandLine.Parameters
 
-@Command(name = "kotlin-micronaut-cli", description = ["Simple Math Operations"],
-        mixinStandardHelpOptions = true)
+@Command(subcommands = [AdditionCommand::class])
 class KotlinMicronautCliCommand : Runnable {
-
-    @Option(names = ["-v", "--verbose"], description = ["..."])
-    private var verbose : Boolean = false
-
     override fun run() {
-        // business logic here
-        if (verbose) {
-            println("Hi!")
-        }
+        println("Welcome to Kotlin Micronaut Cli")
     }
 
     companion object {
-        @JvmStatic fun main(args: Array<String>) {
+        @JvmStatic
+        fun main(args: Array<String>) {
             PicocliRunner.run(KotlinMicronautCliCommand::class.java, *args)
         }
     }
