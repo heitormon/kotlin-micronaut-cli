@@ -7,7 +7,7 @@ import picocli.CommandLine.Command
         mixinStandardHelpOptions = true)
 class AdditionCommand : OperationCommand() {
     override fun run() {
-        println("Result from operation: ${firstVariable + secondVariable}")
+        println("Result from operation: ${variables.sum()}")
     }
 
     companion object {

@@ -3,9 +3,8 @@ package com.heitormon
 import com.heitormon.math.commands.AdditionCommand
 import io.micronaut.configuration.picocli.PicocliRunner
 import picocli.CommandLine.Command
-import picocli.CommandLine.Option
 
-@Command(subcommands = [AdditionCommand::class])
+@Command(subcommands = [AdditionCommand::class], mixinStandardHelpOptions = true)
 class KotlinMicronautCliCommand : Runnable {
     override fun run() {
         println("Welcome to Kotlin Micronaut Cli")
