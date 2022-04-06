@@ -1,3 +1,14 @@
 micronaut:
   application:
     name: kotlinMicronautCli
+  http:
+    client:
+      logger-name: test
+spotify:
+  api:
+    artist:
+      url: https://api.spotify.com
+    auth:
+      url: https://accounts.spotify.com
+      client_id: ${CLIENT_ID}
+      client_secret: ${CLIENT_SECRET}

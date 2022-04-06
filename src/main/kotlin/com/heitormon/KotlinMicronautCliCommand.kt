@@ -1,10 +1,10 @@
 package com.heitormon
 
-import com.heitormon.math.commands.AdditionCommand
+import com.heitormon.command.CreatePlaylist
 import io.micronaut.configuration.picocli.PicocliRunner
 import picocli.CommandLine.Command
 
-@Command(subcommands = [AdditionCommand::class], mixinStandardHelpOptions = true)
+@Command(subcommands = [CreatePlaylist::class], mixinStandardHelpOptions = true)
 class KotlinMicronautCliCommand : Runnable {
     override fun run() {
         println("Welcome to Kotlin Micronaut Cli")

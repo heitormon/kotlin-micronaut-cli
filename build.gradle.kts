@@ -9,14 +9,16 @@ plugins {
 version = "0.1"
 group = "com.heitormon"
 
-val kotlinVersion=project.properties.get("kotlinVersion")
+val kotlinVersion = project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
 }
 
 dependencies {
     kapt("info.picocli:picocli-codegen")
+    kapt("io.micronaut:micronaut-http-validation")
     implementation("info.picocli:picocli")
+    implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
@@ -25,11 +27,11 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
-    implementation("io.micronaut:micronaut-validation")
     compileOnly("org.graalvm.nativeimage:svm")
-    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-    testImplementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut:micronaut-validation")
+
+    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
 }
 
@@ -60,5 +62,4 @@ micronaut {
         annotations("com.heitormon.*")
     }
 }
-
 
