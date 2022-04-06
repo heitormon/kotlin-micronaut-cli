@@ -4,18 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import io.micronaut.core.annotation.Introspected
 
 @Introspected
-class SpotifySearchResponse {
-    @JsonProperty("artists")
-    lateinit var items: Items
-}
-@Introspected
 class Items {
     @JsonProperty("items")
-    lateinit var artists: List<Artist>
+    lateinit var results: List<Result>
 }
 @Introspected
-class Artist {
-    @JsonProperty("href")
+class Result {
+    @JsonProperty("uri")
     lateinit var link: String
 
     @JsonProperty("name")

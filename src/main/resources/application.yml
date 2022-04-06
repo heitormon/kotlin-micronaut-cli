@@ -4,11 +4,12 @@ micronaut:
   http:
     client:
       logger-name: test
+    services:
+        shutdown-quiet-period: 0
+  netty:
+    event-loops:
+        shutdown-quiet-period: 0
 spotify:
   api:
-    artist:
-      url: https://api.spotify.com
-    auth:
-      url: https://accounts.spotify.com
-      client_id: ${CLIENT_ID}
-      client_secret: ${CLIENT_SECRET}
+    url: https://api.spotify.com
+    oauth: ${SPOTIFY_OAUTH}
