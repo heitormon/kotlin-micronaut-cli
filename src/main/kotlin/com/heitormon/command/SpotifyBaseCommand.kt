@@ -13,10 +13,10 @@ open class SpotifyBaseCommand : Runnable {
     protected var playlistSize: Int = 0
 
     @Value("\${spotify.api.oauth}")
-    private lateinit var oauth: String
+    lateinit var oauth: String
 
     @Spec
-    protected var spec: CommandLine.Model.CommandSpec? = null
+    var spec: CommandLine.Model.CommandSpec? = null
 
     @Option(names = ["--name", "-n"], description = ["Playlist Name"], required = true)
     open fun setPlaylistNameOption(name: String) {
@@ -35,7 +35,7 @@ open class SpotifyBaseCommand : Runnable {
     }
 
     override fun run() {
-        println("Running Spotify Base Command")
+        throw Error("Method not implemented")
     }
 
     protected fun setup(http: SpotifyApiClientHttp) {
