@@ -9,4 +9,4 @@ import kotlin.annotation.AnnotationTarget.VALUE_PARAMETER
 @MustBeDocumented
 @Retention(RUNTIME)
 @Target(CLASS, VALUE_PARAMETER)
-annotation class BearerToken()
+annotation class BearerToken

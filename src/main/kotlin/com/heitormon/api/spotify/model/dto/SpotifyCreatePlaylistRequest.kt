@@ -1,4 +1,4 @@
-package com.heitormon.api.spotify.model
+package com.heitormon.api.spotify.model.dto
 
 import io.micronaut.core.annotation.Introspected
 
@@ -8,5 +8,4 @@ class SpotifyCreatePlaylistRequest(
         val description: String,
         val public: Boolean,
         val collaborative: Boolean,
-) {
-}
+)

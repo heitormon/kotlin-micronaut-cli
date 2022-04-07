@@ -11,7 +11,7 @@ import org.reactivestreams.Publisher
 
 @BearerToken
 @Singleton
-class BearerTokenFilter() : HttpClientFilter {
+class BearerTokenFilter : HttpClientFilter {
 
     override fun doFilter(request: MutableHttpRequest<*>?, chain: ClientFilterChain?): Publisher<out HttpResponse<*>>? {
         return chain?.proceed(

@@ -1,4 +1,4 @@
-package com.heitormon.api.spotify.model
+package com.heitormon.api.spotify.model.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import io.micronaut.core.annotation.Introspected
@@ -8,6 +8,7 @@ class Items {
     @JsonProperty("items")
     lateinit var results: List<Result>
 }
+
 @Introspected
 class Result {
     @JsonProperty("uri")

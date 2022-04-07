@@ -1,4 +1,4 @@
-package com.heitormon.api.spotify.model
+package com.heitormon.api.spotify.model.dto
 
 import io.micronaut.core.annotation.Introspected
 

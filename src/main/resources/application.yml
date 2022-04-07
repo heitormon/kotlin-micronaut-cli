@@ -5,10 +5,10 @@ micronaut:
     client:
       logger-name: test
     services:
-        shutdown-quiet-period: 0
+      shutdown-quiet-period: 0
   netty:
     event-loops:
-        shutdown-quiet-period: 0
+      shutdown-quiet-period: 0
 spotify:
   api:
     url: https://api.spotify.com

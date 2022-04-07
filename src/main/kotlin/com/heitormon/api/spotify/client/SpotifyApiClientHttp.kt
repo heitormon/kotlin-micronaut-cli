@@ -1,7 +1,7 @@
 package com.heitormon.api.spotify.client
 
 import com.heitormon.api.spotify.annotation.BearerToken
-import com.heitormon.api.spotify.model.*
+import com.heitormon.api.spotify.model.dto.*
 import io.micronaut.http.annotation.*
 import io.micronaut.http.client.annotation.Client
 

@@ -2,9 +2,9 @@ package com.heitormon.command
 
 import com.heitormon.api.spotify.client.SpotifyApiClientHttp
 import com.heitormon.api.spotify.model.ProcessVariables
-import com.heitormon.api.spotify.model.SpotifyAddTrackPlaylistRequest
-import com.heitormon.api.spotify.model.SpotifyCreatePlaylistRequest
 import com.heitormon.api.spotify.model.SpotifyGenres
+import com.heitormon.api.spotify.model.dto.SpotifyAddTrackPlaylistRequest
+import com.heitormon.api.spotify.model.dto.SpotifyCreatePlaylistRequest
 import jakarta.inject.Inject
 import picocli.CommandLine
 import picocli.CommandLine.Command
