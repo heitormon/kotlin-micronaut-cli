@@ -35,7 +35,6 @@ class CreatePlaylist : SpotifyBaseCommand() {
 
     override fun run() {
         try {
-            println("Running Spotify Youtube Command")
             setup(spotifyApiClientHttp)
             val searchTrack = spotifyApiClientHttp.searchByGenre("genre:${this.playlistGenre}", "track")
             val createPlaylist = spotifyApiClientHttp.createPlaylist(ProcessVariables.user,
